@@ -43,7 +43,10 @@ const parse = (value, decimalPlaces = 6) => {
   // check the value
   if (check(value)) {
     // execute and return the value
-    return Math.round(new Function("return " + value)(), decimalPlaces);
+    const calculatedValue = new Function("return " + value)();
+
+    // round and return
+    return (decimalPlaces ? +calculatedValue.toFixed(decimalPlaces) : calculatedValue);
   }
 
   return 0;
