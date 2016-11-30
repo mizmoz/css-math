@@ -3,8 +3,6 @@ Simple library for performing math operations on css properties.
 
 ## API
 
-#### Helpers
-
 #### Parser
 ```js
 import { parser } from 'css-math';
