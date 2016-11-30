@@ -58,7 +58,7 @@ const parse = (value, decimalPlaces = 6) => {
  * @param cssValue
  * @return {}
  */
-const findAndReplaceUnits = (cssValue) => {
+export const findAndReplaceUnits = (cssValue) => {
   return allowedUnits.reduce((result, value) => {
     if (result.value.indexOf(value) !== -1) {
       // found a unit
@@ -78,7 +78,7 @@ const findAndReplaceUnits = (cssValue) => {
  * @param cssValue
  * @returns {string}
  */
-const parser = (cssValue) => {
+export default (cssValue) => {
   // find the units in the string and remove them
   const { value, unit } = findAndReplaceUnits(cssValue);
 
@@ -88,5 +88,3 @@ const parser = (cssValue) => {
   // return the parsed value and it's unit if one existed
   return (parsedValue && unit ? `${parsedValue}${unit}` : parsedValue);
 };
-
-export default parser;

@@ -1,6 +1,8 @@
-.eslintrc
 .babelrc
-.npmignore
+.eslintrc
 .gitignore
-src/
+.npmignore
+.idea/
 node_modules/
+src/
+tests/
