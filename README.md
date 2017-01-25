@@ -62,6 +62,28 @@ import { min } from 'css-math';
 min(['800px', '600px', '1024px']); // 600px
 ```
 
+### Helpers
+
+#### Get padding box values
+
+Find the top, right, bottom & left padding values from a string
+
+```js
+import { getPaddingBox } from 'css-math';
+
+getPaddingBox('10px 20px'); // { top: 10px, bottom: 10px, left: 20px, right: 20px, width: 40px, height: 20px }
+```
+
+#### Parse value
+
+Parse a string and return it's numeric value and unit type
+
+```js
+import { parseValuesAndUnit } from 'css-math';
+
+parseValuesAndUnit('10px'); // { value: 10, unit: px }
+```
+
 ## Roadmap
 
 #### Add support for setting a base for a unit

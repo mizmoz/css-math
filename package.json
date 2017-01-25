@@ -1,6 +1,6 @@
 {
   "name": "css-math",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Simple library for performing math operations on CSS properties",
   "author": "Mizmoz Limited <support@mizmoz.com>",
   "license": "MIT",
