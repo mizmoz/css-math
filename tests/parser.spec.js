@@ -1,5 +1,5 @@
 
-import parser from '../src/parser';
+import parser, { findAndReplaceUnits } from '../src/parser';
 
 describe('parse the string', () => {
   it('should calculate 5px + 5', () => {
@@ -24,5 +24,27 @@ describe('parse the string', () => {
 
   it('should not calculate a suspicious value', () => {
     expect(parser('console.log(process)')).toBeFalsy();
+  });
+});
+
+
+describe('findAndReplaceUnits', () => {
+  it('should return the value and unit of 10 and px for 10px', () => {
+    expect(findAndReplaceUnits('10px')).toEqual({
+      unit: 'px',
+      value: '10',
+    });
+  });
+
+  it('should return the value and unit of 0 and px for 10px', () => {
+    expect(findAndReplaceUnits('0')).toEqual({
+      unit: '',
+      value: '0',
+    });
+
+    expect(findAndReplaceUnits(0)).toEqual({
+      unit: '',
+      value: '0',
+    });
   });
 });

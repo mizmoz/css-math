@@ -56,4 +56,15 @@ describe('get style padding box', () => {
       height: '20px',
     });
   });
+
+  it('should return default value for positions', () => {
+    expect(getPaddingBox('advanced', 'none')).toEqual({
+      top: 'advanced',
+      bottom: 'advanced',
+      left: 'advanced',
+      right: 'advanced',
+      width: 'none',
+      height: 'none',
+    });
+  });
 });

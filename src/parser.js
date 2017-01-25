@@ -63,13 +63,13 @@ export const findAndReplaceUnits = (cssValue) => {
     if (result.value.indexOf(value) !== -1) {
       // found a unit
       return result = {
-        value: result.value.replace(new RegExp(`([0-9\.]*)${value}`, 'gi'), '$1'),
+        value: String(result.value.replace(new RegExp(`([0-9\.]*)${value}`, 'gi'), '$1')),
         unit: value,
       };
     }
 
     return result;
-  }, { value: cssValue, unit: '' });
+  }, { value: String(cssValue), unit: '' });
 };
 
 /**
