@@ -25,6 +25,10 @@ describe('parse the string', () => {
   it('should not calculate a suspicious value', () => {
     expect(parser('console.log(process)')).toBeFalsy();
   });
+
+  it('should fail gracefully with rubbish input', () => {
+    expect(parser('1 + 1 111')).toBeFalsy();
+  });
 });
 
 

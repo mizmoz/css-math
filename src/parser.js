@@ -40,15 +40,20 @@ const check = (value) => {
  * @param decimalPlaces Max number of decimal places to return, 6 seems ok for most browsers
  */
 const parse = (value, decimalPlaces = 6) => {
-  // check the value
-  if (check(value)) {
-    // execute and return the value
-    const calculatedValue = new Function("return " + value)();
+  try {
+    // check the value
+    if (check(value)) {
+      // execute and return the value
+      const calculatedValue = new Function("return " + value)();
 
-    // round and return
-    return (decimalPlaces ? +calculatedValue.toFixed(decimalPlaces) : calculatedValue);
+      // round and return
+      return (decimalPlaces ? +calculatedValue.toFixed(decimalPlaces) : calculatedValue);
+    }
+  } catch (err) {
+    console.warn('css-math parse() failed', value);
   }
 
+  // something went wrong
   return 0;
 };
 
