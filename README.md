@@ -33,13 +33,14 @@ parser('1px + (8 * (8 + 2))'); // 81px
 
 #### Fraction ( > 0.2 )
 
-Return the fraction of the supplied number
+Return the value of the fraction of the supplied number
 
 ```js
 import { fraction } from 'css-math';
 
 fraction('1/3', '100%'); // 33.333333%
 fraction('4/2', '500px'); // 1000px
+fraction('25%', '800px'); // 200px
 ```
 
 #### Max ( > 0.3 )

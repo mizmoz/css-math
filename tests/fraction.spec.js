@@ -17,4 +17,12 @@ describe('parse the string with fraction', () => {
   it('should calculate a more complex example 1px + (8 * (8 + 2))', () => {
     expect(fraction('4/2', '100%')).toEqual('200%');
   });
+
+  it('should calculate 100% of 30rem', () => {
+    expect(fraction('100%', '30rem')).toEqual('30rem');
+  });
+
+  it('should calculate 40% of 200px', () => {
+    expect(fraction('40%', '200px')).toEqual('80px');
+  });
 });
