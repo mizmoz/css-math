@@ -15,7 +15,7 @@ export default (values) => {
 
     if (! unit) {
       unit = result.unit;
-    } else if (unit !== result.unit) {
+    } else if (Number(result.value) && unit !== result.unit) {
       throw 'values cannot be mixed unit types';
     }
 

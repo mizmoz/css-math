@@ -1,6 +1,6 @@
 {
   "name": "css-math",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "Simple library for performing math operations on CSS properties",
   "author": "Mizmoz Limited <support@mizmoz.com>",
   "license": "MIT",
@@ -18,8 +18,7 @@
     "compile": "babel -d lib/ src/",
     "lint": "eslint",
     "test": "jest",
-    "test:watch": "npm test -- --watch",
-    "publish": "npm publish --access=public"
+    "test:watch": "npm test -- --watch"
   },
   "jest": {
     "testEnvironment": "node",

@@ -18,4 +18,14 @@ describe('parse the list and return the values and unit', () => {
       parseValuesAndUnit(['10%', '100px']);
     }).toThrowError('values cannot be mixed unit types');
   });
+
+  it('should allow mixed types when the value is 0', () => {
+    expect(parseValuesAndUnit(['10%', 0])).toEqual({
+      values: [
+        10,
+        0,
+      ],
+      unit: '%',
+    });
+  });
 });
