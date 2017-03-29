@@ -1,5 +1,6 @@
 
 import parser, { findAndReplaceUnits } from '../src/parser';
+import { warn } from './helpers/console';
 
 describe('parse the string', () => {
   it('should calculate 5px + 5', () => {
@@ -27,7 +28,10 @@ describe('parse the string', () => {
   });
 
   it('should fail gracefully with rubbish input', () => {
-    expect(parser('1 + 1 111')).toBeFalsy();
+    warn((mock) => {
+      expect(parser('1 + 1 111')).toBeFalsy();
+      expect(mock).toBeCalled();
+    });
   });
 });
 

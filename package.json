@@ -1,6 +1,6 @@
 {
   "name": "css-math",
-  "version": "0.3.8",
+  "version": "0.4.0",
   "description": "Simple library for performing math operations on CSS properties",
   "author": "Mizmoz Limited <support@mizmoz.com>",
   "license": "MIT",
@@ -27,8 +27,7 @@
       "js"
     ]
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.1.0",
